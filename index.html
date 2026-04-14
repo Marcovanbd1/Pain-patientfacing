@@ -19,8 +19,6 @@
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.7}
 
-.draft-banner{background:var(--warm-light);border-bottom:1px solid var(--warm-mid);padding:0.45rem 2rem;text-align:center;font-size:12px;color:var(--warm);font-weight:500;letter-spacing:0.04em}
-
 nav{position:sticky;top:0;z-index:200;background:rgba(250,249,247,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:60px}
 .nav-brand{font-family:'Lora',serif;font-size:15px;color:var(--sage);font-weight:500;letter-spacing:0.01em;text-decoration:none}
 .nav-links{display:flex;gap:2rem;list-style:none}
@@ -48,6 +46,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(250,249,247,0.95);backdrop
 .hero h1{font-family:'Lora',serif;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.2;font-weight:400;color:var(--ink);margin-bottom:1.5rem}
 .hero h1 em{color:var(--sage);font-style:italic}
 .hero-lead{font-size:1.15rem;color:var(--ink-mid);line-height:1.75;max-width:580px;margin-bottom:2.5rem;font-weight:300}
+.hero-lead p{margin-bottom:1rem}
+.hero-lead p:last-child{margin-bottom:0}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{background:var(--sage);color:white;padding:0.85rem 1.75rem;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:all 0.2s;font-family:'DM Sans',sans-serif;display:inline-block}
 .btn-primary:hover{background:#3d6b5f;transform:translateY(-1px)}
@@ -129,7 +129,7 @@ section{padding:5rem 2rem}
 .redflag-dot{width:8px;height:8px;background:#c0392b;border-radius:50%;flex-shrink:0}
 .redflag-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.5rem 2rem}
 .redflag-list li{font-size:0.875rem;color:var(--ink-mid);padding-left:1rem;position:relative;line-height:1.55}
-.redflag-list li::before{content:'—';position:absolute;left:0;color:#c0392b;font-size:0.75rem}
+.redflag-list li::before{content:'&#8212;';position:absolute;left:0;color:#c0392b;font-size:0.75rem}
 .redflag-note{margin-top:1.25rem;font-size:0.84rem;color:var(--stone)}
 
 footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-size:0.85rem}
@@ -154,14 +154,11 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
   .redflags{padding:1.5rem}
   .footer-inner{grid-template-columns:1fr}
   .footer-links{text-align:left;margin-top:1.5rem}
-  .draft-banner{font-size:11px;padding:0.45rem 1.25rem}
   .act-card-featured{grid-column:auto}
 }
 </style>
 </head>
 <body>
-
-<div class="draft-banner">Draft for clinical review &mdash; not yet shared with patients</div>
 
 <nav>
   <a href="#" class="nav-brand">Living with pain</a>
@@ -190,7 +187,11 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
   <div class="hero-inner">
     <p class="hero-eyebrow">Weymouth &amp; Portland &middot; Dorset Pain Management Service</p>
     <h1>Pain is real.<br><em>And there is more<br>you can do.</em></h1>
-    <p class="hero-lead">Living with ongoing pain is exhausting. This page won&rsquo;t pretend otherwise. But the science of pain has changed &mdash; and what you know about your pain, and how you relate to it, can genuinely make a difference.</p>
+    <div class="hero-lead">
+      <p>Living with ongoing pain is exhausting. It can affect your body, your mood, your sleep, and your sense of who you are. This page won&rsquo;t pretend otherwise.</p>
+      <p>You may have already tried many things, with mixed or limited results. That is frustrating, and it is worth saying so.</p>
+      <p>But the science of pain has changed. We now know that pain is not only about injury or damage. It is also shaped by how the nervous system responds over time. And that means there may be more you can do.</p>
+    </div>
     <div class="hero-actions">
       <a href="#understand" class="btn-primary">Start here</a>
       <a href="#support" class="btn-ghost">Find local support</a>
@@ -215,12 +216,12 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
       <div class="journey-step">
         <div class="step-num">02</div>
         <div class="step-title">Relate to it differently</div>
-        <p class="step-desc">Fighting pain often makes it louder. There are ways to change your relationship with it &mdash; without giving in.</p>
+        <p class="step-desc">Fighting pain often makes it louder. There are ways to change your relationship with it, without giving in.</p>
       </div>
       <div class="journey-step">
         <div class="step-num">03</div>
         <div class="step-title">Live well alongside it</div>
-        <p class="step-desc">Recovery isn&rsquo;t always about pain disappearing. It&rsquo;s about reclaiming your life &mdash; gradually, steadily, on your terms.</p>
+        <p class="step-desc">Recovery isn&rsquo;t always about pain disappearing. It&rsquo;s about reclaiming your life, gradually, steadily, on your terms.</p>
       </div>
     </div>
   </div>
@@ -231,7 +232,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
   <div class="section-inner">
     <p class="section-label">Step one</p>
     <h2 class="section-title">Understand your pain</h2>
-    <p class="section-intro">The science of persistent pain has changed dramatically. These short videos explain why pain persists &mdash; and why that&rsquo;s actually good news.</p>
+    <p class="section-intro">The science of persistent pain has changed dramatically. These short videos explain why pain persists, and why that&rsquo;s actually good news.</p>
     <div class="video-grid">
       <a href="https://youtu.be/ikUzvSph7Z4" target="_blank" rel="noopener" class="video-card">
         <div class="video-thumb thumb-beast">
@@ -240,7 +241,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
         </div>
         <div class="video-body">
           <h3>Tame the Beast</h3>
-          <p>Professor Lorimer Moseley explains why persistent pain happens &mdash; and why it&rsquo;s possible to turn the volume down. The most-shared pain science animation in the world.</p>
+          <p>Professor Lorimer Moseley explains why persistent pain happens, and why it&rsquo;s possible to turn the volume down. The most-shared pain science animation in the world.</p>
           <p class="video-duration">tamethebeast.org &middot; Free</p>
         </div>
       </a>
@@ -251,7 +252,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
         </div>
         <div class="video-body">
           <h3>Flippin&rsquo; Pain</h3>
-          <p>A public health movement that explains the science of pain using six key messages. Podcasts, animations and worksheets &mdash; at your own pace, in your own way.</p>
+          <p>A public health movement that explains the science of pain using six key messages. Podcasts, animations and worksheets, at your own pace, in your own way.</p>
           <p class="video-duration">flippinpain.co.uk &middot; Free</p>
         </div>
       </a>
@@ -275,28 +276,28 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
   <div class="section-inner">
     <p class="section-label">Step two</p>
     <h2 class="section-title">Relate to pain differently</h2>
-    <p class="section-intro">Acceptance and Commitment Therapy (ACT) is recommended by NICE for chronic pain. It doesn&rsquo;t ask you to eliminate pain &mdash; it helps you change your relationship with it so it takes up less of your life.</p>
+    <p class="section-intro">Acceptance and Commitment Therapy (ACT) is recommended by NICE for chronic pain. It doesn&rsquo;t ask you to eliminate pain. It helps you change your relationship with it so it takes up less of your life.</p>
     <div class="act-intro-card">
-      <p>&ldquo;Where ACT differs from most other approaches is that we don&rsquo;t try to avoid or get rid of the pain. Instead, we aim to fundamentally change your relationship with it. And as we do that, the pain itself transforms &mdash; it no longer holds you back in the same way.&rdquo; &mdash; Russ Harris</p>
+      <p>&ldquo;Where ACT differs from most other approaches is that we don&rsquo;t try to avoid or get rid of the pain. Instead, we aim to fundamentally change your relationship with it. And as we do that, the pain itself transforms. It no longer holds you back in the same way.&rdquo; &mdash; Russ Harris</p>
     </div>
-    <p class="act-honest-note">These resources are specifically about pain &mdash; not general stress or anxiety. They are all free.</p>
+    <p class="act-honest-note">These resources are specifically about pain, not general stress or anxiety. They are all free.</p>
     <div class="act-grid">
       <a href="https://www.actforpain.com" target="_blank" rel="noopener" class="act-card-featured">
         <span class="act-featured-label">Free online programme</span>
         <h3>ACT for Pain</h3>
-        <p>A free self-management programme built specifically for people living with chronic pain. It uses ACT principles to help you make room for pain while building a life that matters to you &mdash; with videos, written guides and practical exercises. You don&rsquo;t need a referral to access it.</p>
+        <p>A free self-management programme built specifically for people living with chronic pain. It uses ACT principles to help you make room for pain while building a life that matters to you, with videos, written guides and practical exercises. You don&rsquo;t need a referral to access it.</p>
         <p class="act-source">actforpain.com &middot; Free &middot; No referral needed</p>
       </a>
       <a href="https://thehappinesstrap.com/upimages/Transforming_Pain_-_Part_1_-_Russ_Harris.pdf" target="_blank" rel="noopener" class="act-card">
         <span class="act-card-type">Reading &middot; 10 min</span>
         <h3>Transforming Pain</h3>
-        <p>A short, plainly written guide by Dr Russ Harris on changing your relationship with pain specifically &mdash; not with stress or difficult thoughts generally. Free to download and read at your own pace.</p>
+        <p>A short, plainly written guide by Dr Russ Harris on changing your relationship with pain specifically, not with stress or difficult thoughts generally. Free to download and read at your own pace.</p>
         <p class="act-source">Russ Harris &middot; thehappinesstrap.com &middot; Free PDF</p>
       </a>
       <a href="https://www.youtube.com/watch?v=r1C8hwj5LXw" target="_blank" rel="noopener" class="act-card">
         <span class="act-card-type">Guided exercise &middot; 7 min</span>
         <h3>Leaves on a Stream</h3>
-        <p>A gentle mindfulness exercise that helps you notice pain, difficult thoughts and feelings &mdash; without being swept away by them. Something you can return to whenever you need it.</p>
+        <p>A gentle mindfulness exercise that helps you notice pain, difficult thoughts and feelings, without being swept away by them. Something you can return to whenever you need it.</p>
         <p class="act-source">Walk In My Shoes &middot; YouTube &middot; Free</p>
       </a>
     </div>
@@ -308,22 +309,22 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
   <div class="section-inner">
     <p class="section-label">Step three</p>
     <h2 class="section-title">Live well alongside pain</h2>
-    <p class="section-intro">Recovery from persistent pain is rarely about pain disappearing completely. It&rsquo;s about doing more of what matters &mdash; gradually, steadily, without the boom-and-bust cycle.</p>
+    <p class="section-intro">Recovery from persistent pain is rarely about pain disappearing completely. It&rsquo;s about doing more of what matters, gradually, steadily, without the boom-and-bust cycle.</p>
     <div class="selfmgmt-grid">
       <div class="selfmgmt-card">
         <span class="selfmgmt-tag">Pacing</span>
         <h3>Break the boom-and-bust cycle</h3>
-        <p>Many people with persistent pain overdo it on good days and then crash. Pacing means spreading activity across the day and resting before pain rises &mdash; not after.</p>
+        <p>Many people with persistent pain overdo it on good days and then crash. Pacing means spreading activity across the day and resting before pain rises, not after.</p>
         <div class="selfmgmt-tips">
           <span class="tip">Break tasks into smaller chunks</span>
-          <span class="tip">Use a timer &mdash; stop before pain spikes</span>
+          <span class="tip">Use a timer, stop before pain spikes</span>
           <span class="tip">Steady progress beats bursts and crashes</span>
         </div>
       </div>
       <div class="selfmgmt-card">
         <span class="selfmgmt-tag">Movement</span>
-        <h3>Move &mdash; gently, gradually, safely</h3>
-        <p>Movement helps calm the nervous system. NICE recommends yoga and Tai Chi for chronic pain. You don&rsquo;t need to be fit to start &mdash; low and slow is the rule.</p>
+        <h3>Move, gently, gradually, safely</h3>
+        <p>Movement helps calm the nervous system. NICE recommends yoga and Tai Chi for chronic pain. You don&rsquo;t need to be fit to start. Low and slow is the rule.</p>
         <div class="selfmgmt-tips">
           <span class="tip">Short walks, seated stretches, gentle yoga</span>
           <span class="tip">Tai Chi for pain and balance</span>
@@ -333,19 +334,19 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
       <div class="selfmgmt-card">
         <span class="selfmgmt-tag">Flare-ups</span>
         <h3>When pain increases</h3>
-        <p>Flares are common and don&rsquo;t mean you&rsquo;ve done damage. They are part of the process &mdash; not a sign of failure. The goal is to return to your routine, not to stop altogether.</p>
+        <p>Flares are common and don&rsquo;t mean you&rsquo;ve done damage. They are part of the process, not a sign of failure. The goal is to return to your routine, not to stop altogether.</p>
         <div class="selfmgmt-tips">
-          <span class="tip">Lower activity temporarily &mdash; don&rsquo;t stop completely</span>
+          <span class="tip">Lower activity temporarily, don&rsquo;t stop completely</span>
           <span class="tip">Try breathing: 4 seconds in, 6 seconds out</span>
-          <span class="tip">Review sleep and stress &mdash; they feed flares</span>
+          <span class="tip">Review sleep and stress, they feed flares</span>
         </div>
       </div>
       <div class="selfmgmt-card">
         <span class="selfmgmt-tag">Sleep</span>
-        <h3>Pain and sleep &mdash; a two-way street</h3>
+        <h3>Pain and sleep, a two-way street</h3>
         <p>Poor sleep makes pain worse. Better sleep makes everything more manageable. Small habits make a real difference over time.</p>
         <div class="selfmgmt-tips">
-          <span class="tip">Keep a regular bedtime &mdash; even at weekends</span>
+          <span class="tip">Keep a regular bedtime, even at weekends</span>
           <span class="tip">Wind down without screens for 30 minutes</span>
           <span class="tip">Avoid long daytime naps</span>
         </div>
@@ -361,7 +362,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
       <a href="https://dorsetpain.org.uk" target="_blank" rel="noopener" class="selfmgmt-card is-link">
         <span class="selfmgmt-tag">Dorset</span>
         <h3>Dorset Pain Management Service</h3>
-        <p>The Four Pillars of Pain Management, videos, audio guides, support groups and online platform &mdash; all from the Dorset Pain Service.</p>
+        <p>The Four Pillars of Pain Management, videos, audio guides, support groups and online platform, all from the Dorset Pain Service.</p>
         <div class="selfmgmt-tips">
           <span class="tip">dorsetpain.org.uk &middot; Free</span>
         </div>
@@ -375,7 +376,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
   <div class="section-inner">
     <p class="section-label">In Weymouth &amp; Portland</p>
     <h2 class="section-title">You are not alone</h2>
-    <p class="section-intro">Many people across Dorset live with ongoing pain. These local services can help with the wider picture &mdash; confidence, mood, movement, and connection.</p>
+    <p class="section-intro">Many people across Dorset live with ongoing pain. These local services can help with the wider picture, confidence, mood, movement, and connection.</p>
     <div class="local-grid">
       <a href="https://www.helpandcare.org.uk" target="_blank" rel="noopener" class="local-card">
         <h3>HOPE self-management course</h3>
@@ -402,10 +403,10 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
         <p>Free pain apps reviewed for quality and safety by ORCHA. Track pain patterns, guided relaxation, gentle movement and sleep support.</p>
         <p class="local-org">NHS &middot; ORCHA-reviewed &middot; Free</p>
       </a>
-      <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/nhs-talking-therapies/" target="_blank" rel="noopener" class="local-card">
-        <h3>NHS Talking Therapies</h3>
-        <p>ACT and other evidence-based psychological support. Talk to your GP about a referral to Steps to Wellbeing in Dorset.</p>
-        <p class="local-org">NHS &middot; GP referral</p>
+      <a href="https://www.steps2wellbeing.co.uk" target="_blank" rel="noopener" class="local-card">
+        <h3>Steps 2 Wellbeing</h3>
+        <p>Free NHS talking therapies for people in Dorset, including support for pain affecting your mood and daily life. You can refer yourself directly, no GP needed.</p>
+        <p class="local-org">steps2wellbeing.co.uk &middot; Free &middot; Self-refer</p>
       </a>
     </div>
 
@@ -419,7 +420,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
         <li>Rapidly worsening neurological symptoms</li>
         <li>Sudden or significant change in your pain</li>
         <li>Pain that is stopping you coping day to day</li>
-        <li>If you are struggling emotionally &mdash; call NHS 111</li>
+        <li>If you are struggling emotionally, call NHS 111</li>
       </ul>
       <p class="redflag-note">Call <strong>999</strong> or go to A&amp;E if someone is in immediate danger or you are very worried that waiting is not safe.</p>
     </div>
@@ -443,7 +444,7 @@ footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:3rem 2rem;font-
       <li><a href="https://www.tamethebeast.org" target="_blank" rel="noopener">Tame the Beast</a></li>
       <li><a href="https://www.actforpain.com" target="_blank" rel="noopener">ACT for Pain</a></li>
       <li><a href="https://www.retrainpain.org" target="_blank" rel="noopener">Retrain Pain</a></li>
-      <li><a href="https://www.nhs.uk" target="_blank" rel="noopener">NHS</a></li>
+      <li><a href="https://www.steps2wellbeing.co.uk" target="_blank" rel="noopener">Steps 2 Wellbeing</a></li>
     </ul>
   </div>
 </footer>
